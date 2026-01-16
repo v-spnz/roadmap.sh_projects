@@ -7,59 +7,93 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--bg);
-    color: var(--text);
-    transition: background-color 0.3s, color 0.3s;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
 }
 
 
 nav {
   background-color: var(--nav-bg);
 }
-
+.nav img {
+  justify-content: left;
+}
 .nav-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
 }
 
 .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-    margin-right: 100px;
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin-right: 100px;
 }
 
 .nav-links li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
+  text-decoration: none;
+  font-weight: 500;
+
+  .nav-links li a {
+    color: var(--text);
+  }
 }
 
-#theme-toggle:checked ~ * {
+body:has(#theme-toggle:checked) {
   --bg: #0b0b0f;
   --text: #f2f2f2;
-  --nav-bg: #121218;
+  --nav-bg: #0b0b0f;
 }
 
 .theme-toggle {
   cursor: pointer;
   padding: 6px 10px;
-  margin-left: 16px;
+  margin-right: 50px;
   border-radius: 6px;
   background: #eee;
   transition: background 0.3s, transform 0.2s;
 }
 
-#theme-toggle:checked + .theme-toggle {
+#theme-toggle:checked+.theme-toggle {
   background: #333;
   transform: rotate(180deg);
 }
 
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
 
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
 
+.hero p{
+  color: var(--text);
+}
 
+.projects-wrapper {
+  margin-left: 50px;
+}
+
+.projects-wrapper ul{
+  padding-left: 0;
+  margin: 0;
+}
