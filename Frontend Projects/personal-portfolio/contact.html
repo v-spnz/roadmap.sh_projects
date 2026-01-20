@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,18 +10,51 @@
     <link rel="stylesheet" href="styles.css">
     <title>CV Website</title>
 </head>
+
 <body>
     <header>
-        <img src="/img/logo.png" alt="Profile Picture" width="100" height="100">
-        <nav>
-            <ul>
-                    <li><a href="/Frontend Projects/personal-portfolio/index.html">Home</a></li>
-                <li><a href="/Frontend Projects/personal-portfolio//projects.html">Projects</a></li>
-                <li><a href="/Frontend Projects/personal-portfolio//articles.html">Articles</a></li>
-                <li><a href="/Frontend Projects/personal-portfolio//contact.html">Contact</a></li>
-            </ul>
+        <nav class="main-nav">
+            <div class="nav-wrapper">
+                <img src="/img/logo.png" alt="Profile Picture" width="100" height="100">
+                <div class="nav-actions">
+                    <ul class="nav-links">
+                        <li><a href="/Frontend Projects/personal-portfolio/index.html">Home</a> / </li>
+                        <li><a href="/Frontend Projects/personal-portfolio//projects.html">Projects</a> / </li>
+                        <li><a href="/Frontend Projects/personal-portfolio//articles.html">Articles</a> / </li>
+                        <li><a href="/Frontend Projects/personal-portfolio//contact.html">Contact</a> / </li>
+                    </ul>
+                    <input type="checkbox" id="theme-toggle" hidden>
+                    <label for="theme-toggle" class="theme-toggle">🌓</label>
+                </div>
+            </div>
         </nav>
+        <div class="hero">
+            <div class="container">
+                <h1>Contact Us</h1>
+            </div>
+        </div>
     </header>
-    <p>Contact</p>
+    <main>
+        <div class="container">
+            <div class="contact-box">
+                <fieldset>
+                    <legend>Send Us a Message</legend>
+                    <form action="https://httpbin.org/get" method="get">
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
+
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message" placeholder="Enter your message" rows="4" cols="50" required></textarea><br><br>
+
+                        <input class="submit-button" type="submit" value="Submit">
+                    </form>
+                </fieldset>
+            </div>
+        </div>
+    </main>
 </body>
+
 </html>
